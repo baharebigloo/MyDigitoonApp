@@ -64,7 +64,9 @@ object AppModule {
             appContext,
             AppDatabase::class.java,
             "RssReader"
-        ).build()
+
+        ).fallbackToDestructiveMigration()
+            .build()
     }
     //----------------------------------------------------------------------------------------------
     //instance of movieDao

@@ -42,7 +42,7 @@ class MoviesViewModel @Inject constructor(
         return dbMovieListRepository.getBatmanMoviesList()
     }
     //----------------------------------------------------------------------------------------------
-      fun cacheMovies(movie: ResMovies) {                        // saving recipe as a Recipe Entity object, and inserting in the db.
+      fun cacheMovies(movie: ResMovies) {
         val moviesEntity = Movie(movie)
         insertMovies(moviesEntity)
     }

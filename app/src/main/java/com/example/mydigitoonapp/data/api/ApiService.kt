@@ -6,14 +6,10 @@ import retrofit2.Response
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
-import retrofit2.http.POST
-import java.util.HashMap
+import retrofit2.http.Query
 
 
 interface ApiService {
-
-
-
     //----------------------------------------------------------------------------------------------
     companion object {
         const val ENDPOINT = "https://www.omdbapi.com/"
@@ -23,9 +19,8 @@ interface ApiService {
     suspend fun getBatmanMoviesList(): Response<ResMovies>
 
     //----------------------------------------------------------------------------------------------
-    @FormUrlEncoded
     @GET("?apikey=3e974fca")
-    suspend fun getMovieDetail(@Field("imdbID") imdbID:String): Response<ResMovieDetail>
+    suspend fun getMovieDetail(@Query("i") imdbID:String): Response<ResMovieDetail>
     //----------------------------------------------------------------------------------------------
 
 }

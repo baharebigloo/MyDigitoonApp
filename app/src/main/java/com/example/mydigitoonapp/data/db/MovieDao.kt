@@ -16,4 +16,13 @@ interface MovieDao {
 
     @Query("SELECT * FROM movies ORDER BY id ASC")
     fun readMovies(): Flow<List<Movie>>
+
+    //-----------------------------------------------------------------------------
+    //movieDetail dao
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertMovieDetail(movieDetail: MovieDetail)
+
+    @Query("SELECT * FROM movie_detail ORDER BY id ASC")
+    fun readMovieDetail(): Flow<MovieDetail>
+    //-------------------------------------------------------------------------------
 }

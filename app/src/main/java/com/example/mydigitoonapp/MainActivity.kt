@@ -62,7 +62,7 @@ class MainActivity : AppCompatActivity() {
                     moviesAdapter.dataList = it.data.body()!!.search
                     binding.recyclerView.adapter = moviesAdapter
 
-                   var movieEntity = Movie(it.data.body()!!)
+                   val movieEntity = Movie(it.data.body()!!)
                     moviesViewModel.cacheMovies(movieEntity.movie)
                     Log.d("TAGppppp", "provideData: " + movieEntity.movie.search.size)
                 }
