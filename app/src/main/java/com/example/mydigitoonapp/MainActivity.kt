@@ -126,6 +126,7 @@ class MainActivity : AppCompatActivity() {
                     // in case database is empty
                     Log.d("TAGlllll", "readCachedData:elseeeeeeee ")
                     netWorkOffLineDialogFragment.show(supportFragmentManager, "")
+                    netWorkOffLineDialogFragment.isCancelable = false
                     netWorkOffLineDialogFragment.setReloadListener {
                         if (isInternetAvailable( applicationContext)) {
                             netWorkOffLineDialogFragment.dismiss()
