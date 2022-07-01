@@ -12,6 +12,8 @@ import java.util.HashMap
 
 interface ApiService {
 
+
+
     //----------------------------------------------------------------------------------------------
     companion object {
         const val ENDPOINT = "https://www.omdbapi.com/"
